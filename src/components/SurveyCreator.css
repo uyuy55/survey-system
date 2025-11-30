@@ -1,0 +1,488 @@
+.survey-creator {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.creator-header {
+  margin-bottom: 2rem;
+}
+
+.survey-title {
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #e1e5e9;
+  padding: 0.5rem 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.survey-title:focus {
+  border-color: #667eea;
+}
+
+.survey-description {
+  width: 100%;
+  border: 1px solid #e1e5e9;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 80px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.survey-description:focus {
+  border-color: #667eea;
+}
+
+.questions-list {
+  margin-bottom: 2rem;
+}
+
+.creator-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.add-question-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.add-question-buttons button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-question-buttons button:hover {
+  background: #5a6fd8;
+}
+
+.save-survey-btn {
+  background: #48bb78;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.save-survey-btn:hover {
+  background: #3ca56d;
+}
+
+.question-editor {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question-type-badge {
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.question-title-input {
+  flex: 1;
+  border: 1px solid #e1e5e9;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.question-title-input:focus {
+  border-color: #667eea;
+}
+
+.question-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.question-actions button {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.question-actions button:hover {
+  background: #5a6268;
+}
+
+.question-actions button.delete {
+  background: #e53e3e;
+}
+
+.question-actions button.delete:hover {
+  background: #c53030;
+}
+
+.required-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.options-list {
+  margin-top: 1rem;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.option-input {
+  flex: 1;
+  border: 1px solid #e1e5e9;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.option-input:focus {
+  border-color: #667eea;
+}
+
+.add-option-btn {
+  background: #48bb78;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-option-btn:hover {
+  background: #3ca56d;
+}
+
+.remove-option-btn {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-option-btn:hover {
+  background: #c53030;
+}
+
+/* 逻辑编辑器样式 */
+.logic-editor {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 5px;
+  border: 1px solid #e2e8f0;
+}
+
+.logic-editor h4 {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.logic-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.logic-rule select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+  background: white;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .logic-rule {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logic-rule select {
+    width: 100%;
+  }
+}
+
+/* SurveyCreator.css 添加文件设置样式 */
+.file-settings {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 5px;
+  border: 1px solid #e2e8f0;
+}
+
+.setting-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.setting-group label {
+  min-width: 120px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.setting-group select,
+.setting-group input {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background: white;
+}
+
+.setting-group input {
+  width: 80px;
+}
+
+.loading-placeholder {
+  padding: 1rem;
+  text-align: center;
+  color: #6c757d;
+  background: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.question-editor.loading {
+  opacity: 0.8;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+}
+
+.loading-text {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+/* 优化移动端显示 */
+@media (max-width: 768px) {
+  .question-editor.loading .question-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .question-editor.loading .question-actions {
+    align-self: flex-end;
+  }
+}
+
+/* 协作状态栏 */
+.collaboration-status-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 15px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-indicator {
+  font-size: 16px;
+}
+
+.status-indicator.connected {
+  color: #4CAF50;
+}
+
+.status-indicator.disconnected {
+  color: #f44336;
+}
+
+.user-count {
+  color: #666;
+}
+
+.collaboration-notice {
+  color: #2196F3;
+  font-style: italic;
+}
+
+/* 锁定状态 */
+.question-editor.locked {
+  position: relative;
+  opacity: 0.7;
+}
+
+.lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 8px;
+}
+
+.lock-message {
+  background: #ffeb3b;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ffc107;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 禁用状态的输入框 */
+.question-editor.locked input,
+.question-editor.locked textarea,
+.question-editor.locked select,
+.question-editor.locked button:not(.question-actions button) {
+  pointer-events: none;
+  background-color: #f5f5f5;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .collaboration-status-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+/* AI 建议按钮样式 */
+.action-section {
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.ai-suggestion-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ai-suggestion-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.ai-suggestion-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .creator-actions {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .ai-suggestion-buttons {
+    flex-direction: column;
+  }
+  
+  .ai-suggestion-btn {
+    justify-content: center;
+  }
+  
+  .action-section {
+    text-align: center;
+  }
+}
+
+/* 移动端优化 */
+@media (max-width: 480px) {
+  .add-question-buttons {
+    flex-direction: column;
+  }
+  
+  .add-question-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+}

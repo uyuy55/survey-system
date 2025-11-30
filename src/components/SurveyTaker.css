@@ -1,0 +1,381 @@
+.survey-taker {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.survey-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f1f3f4;
+}
+
+.survey-header h2 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.survey-header p {
+  color: #718096;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* 进度指示器 */
+.progress-indicator {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.5s ease;
+  border-radius: 4px;
+}
+
+.progress-text {
+  text-align: center;
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 问题导航 */
+.question-navigation {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.nav-title {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #718096;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-button:hover:not(:disabled) {
+  border-color: #667eea;
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+.nav-button.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+  transform: scale(1.1);
+}
+
+.nav-button.visited:not(.active) {
+  background: #cbd5e0;
+  border-color: #cbd5e0;
+  color: white;
+}
+
+.nav-button.has-error:not(.active) {
+  border-color: #e53e3e;
+  background: #fed7d7;
+  color: #e53e3e;
+}
+
+.nav-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+.error-dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 12px;
+  height: 12px;
+  background: #e53e3e;
+  border-radius: 50%;
+  color: white;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 问题容器 */
+.questions-container {
+  margin-bottom: 2rem;
+  min-height: 200px;
+}
+
+/* 导航按钮 - 水平居中布局 */
+.navigation-buttons.horizontal-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-indicator {
+  color: #718096;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.navigation-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  min-width: 100px;
+}
+
+.prev-btn, .next-btn {
+  background: #667eea;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.prev-btn:hover:not(:disabled), .next-btn:hover:not(:disabled) {
+  background: #5a6fd8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.submit-btn {
+  background: #48bb78;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background: #3ca56d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.reset-btn-small {
+  background: #ed8936;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: auto;
+}
+
+.reset-btn-small:hover {
+  background: #dd7725;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(237, 137, 54, 0.3);
+}
+
+/* 感谢页面 */
+.thank-you-page {
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.thank-you-page h2 {
+  color: #48bb78;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.thank-you-page p {
+  color: #718096;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.thank-you-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.thank-you-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.thank-you-actions button:first-child {
+  background: #667eea;
+  color: white;
+}
+
+.thank-you-actions button:first-child:hover {
+  background: #5a6fd8;
+}
+
+.thank-you-actions .reset-btn {
+  background: #ed8936;
+  color: white;
+}
+
+.thank-you-actions .reset-btn:hover {
+  background: #dd7725;
+}
+
+/* 无问卷状态 */
+.no-survey {
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.no-survey h2 {
+  color: #e53e3e;
+  margin-bottom: 1rem;
+}
+
+.no-survey button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* 逻辑跳转提示 */
+.logic-hint {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #fffaf0;
+  border: 1px solid #feebc8;
+  border-radius: 5px;
+  color: #dd6b20;
+}
+
+.logic-hint small {
+  font-size: 0.8rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .survey-taker {
+    padding: 1rem;
+  }
+  
+  .survey-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .nav-buttons {
+    justify-content: center;
+  }
+  
+  .nav-button {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+  
+  .navigation-buttons.horizontal-layout {
+    padding: 1rem 0;
+  }
+  
+  .nav-group {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .nav-info {
+    order: -1;
+  }
+  
+  .navigation-buttons button {
+    width: 100%;
+  }
+  
+  .thank-you-actions {
+    flex-direction: column;
+  }
+  
+  .question-navigation {
+    padding: 0.75rem;
+  }
+}
